@@ -1,0 +1,34 @@
+{
+  "name": "personal-budget",
+  "version": "1.0.0",
+  "description": "The path to NGInx main folder:\r /usr/share/nginx/html",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandanidabhi/personal-budget"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nandanidabhi/personal-budget/blob/master/index.html"
+  },
+  "homepage": "https://github.com/nandanidabhi/personal-budget/blob/master/index.html",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "console": "^0.7.2",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.8.0",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3",
+    "node-cache": "^5.1.2",
+    "validator": "^13.5.2"
+  }
+}

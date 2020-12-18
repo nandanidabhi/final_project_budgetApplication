@@ -1,0 +1,19 @@
+<div class="navbar">
+  <li><a class="right" [routerLink]="['/register']">Register</a></li>
+</div>
+<form action="javascript:void(0);" (submit)="homepage()">
+  <div class="imgcontainer">
+    <img src="/assets/avatar.jpg" alt="Budget" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" id="defaultLoginFormEmail" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="defaultLoginFormPassword" required>
+
+    <button type="submit">Login</button>
+
+  </div>
+</form>
