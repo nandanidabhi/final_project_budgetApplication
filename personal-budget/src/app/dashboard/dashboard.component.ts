@@ -44,10 +44,8 @@ export class DashboardComponent implements OnInit {
       .find(row => row.startsWith('token'))
       .split('=')[1];
 
-    //getting the month and the year
     var start = (document.getElementById('month') as HTMLInputElement).value;
-    //fetching only month in it.
-    var month = start.split("-");
+    var month = start.split('-');
     var month_value = parseInt(month[1])-1;
 
     const headers = new HttpHeaders({
@@ -114,53 +112,28 @@ export class DashboardComponent implements OnInit {
   displaychart() {
     var display_type = (document.getElementById('display') as HTMLInputElement).value;
     console.log(display_type);
-    var pie = (document.getElementById('pie-chart-container') as HTMLInputElement);
-    var doughnut = (document.getElementById('doughnut-chart-container') as HTMLInputElement);
-    var bar = (document.getElementById('bar-chart-container') as HTMLInputElement);
-    var line = (document.getElementById('line-chart-container') as HTMLInputElement);
-    var table = (document.getElementById('table-id-area') as HTMLInputElement);
+
+    var container = (document.getElementById('container') as HTMLInputElement);
+    // var doughnut = (document.getElementById('doughnut-chart-container') as HTMLInputElement);
+    // var bar = (document.getElementById('bar-chart-container') as HTMLInputElement);
+    // var line = (document.getElementById('line-chart-container') as HTMLInputElement);
+    // var table = (document.getElementById('table-id-area') as HTMLInputElement);
     if (display_type == 'piechart') {
       this.createPieChart();
-      pie.style.display = "";
-      doughnut.style.display = "none";
-      bar.style.display = "none";
-      line.style.display = "none";
-      table.style.display = "none";
-    } else if (display_type == 'doughnut') {
-      this.createDoughNutChart();
-      pie.style.display = "none";
-      doughnut.style.display = "";
-      bar.style.display = "none";
-      line.style.display = "none";
-      table.style.display = "none";
-    } else if (display_type == 'barchart') {
-      this.createBarChart();
-      pie.style.display = "none";
-      doughnut.style.display = "none";
-      bar.style.display = "";
-      line.style.display = "none";
-      table.style.display = "none";
-    } else if (display_type == 'linechart') {
-      this.createLineChart();
-      pie.style.display = "none";
-      doughnut.style.display = "none";
-      bar.style.display = "none";
-      table.style.display = "none";
-      line.style.display = "";
-    } else if (display_type == 'table') {
-      pie.style.display = "none";
-      doughnut.style.display = "none";
-      bar.style.display = "none";
-      table.style.display = "";
-      line.style.display = "none";
-      var dt = this.dtOptions = {
-        pagingType: 'full_numbers',
-        pageLength: 5,
-        processing: true,
-        scrollY: "400px",
-        scrollCollapse: true
-      };
-    }
+      container.style.display = "";
+  }else if(display_type == 'barchart'){
+    this.createBarChart();
+      container.style.display = "";
+
+  }else if(display_type == 'doughnut'){
+    this.createDoughNutChart();
+      container.style.display = "";
+
+  }else if(display_type == 'linechart'){
+    this.createLineChart();
+      container.style.display = "";
+
+  }
   }
 
 }
