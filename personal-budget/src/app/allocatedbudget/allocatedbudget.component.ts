@@ -39,7 +39,7 @@ export class AllocatedbudgetComponent implements OnInit {
       'Authorization': `Bearer ${cookieValue}`
     })
 
-    this.http.get('http://localhost:4000/api/nandani/getBudget', { headers })
+    this.http.get('http://64.225.3.162:3000/api/nandani/getBudget', { headers })
       .subscribe(posts => {
         this.posts = posts["user_budget"].allotedBudget;
 
@@ -67,7 +67,7 @@ export class AllocatedbudgetComponent implements OnInit {
       color: (document.getElementById('color') as HTMLInputElement).value,
     };
     axios
-      .put('http://localhost:4000/api/nandani/putBudget', data, config)
+      .put('http://64.225.3.162:3000/api/nandani/putBudget', data, config)
       .then((res) => {
         if (res.data) {
           alert('Data Successfully Added');
@@ -89,12 +89,12 @@ export class AllocatedbudgetComponent implements OnInit {
       },
     };
     axios
-      .put('http://localhost:4000/api/nandani/deleteBudget', config)
+      .put('http://64.225.3.162:3000/api/nandani/deleteBudget', config)
       .then((res) => {
         if (res.data) {
           alert('Deleted Budget Successfully ');
           window.location.href = '/allocatedbudget';
-        } else {
+        }else {
           alert('Something went wrong');
         }
       })

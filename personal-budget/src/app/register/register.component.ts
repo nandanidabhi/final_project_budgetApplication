@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
       "password": (document.getElementById('password') as HTMLInputElement).value
   };
   console.log("Data:"+data.password);
-  axios.post('http://localhost:4000/api/nandani/signup', data)
+  axios.post('http://64.225.3.162:3000/api/nandani/signup', data)
   .then(res => {
     console.log("inside");
     if(res.data && res){

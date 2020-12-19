@@ -14,7 +14,7 @@ export class HeaderloginComponent implements OnInit {
   }
 
   logout(){
-    axios.get('http://localhost:4000/api/nandani/users/logout').then(res => {
+    axios.get('http://64.225.3.162:3000/api/nandani/users/logout').then(res => {
       if(res.data){
         console.log("Hello");
             window.sessionStorage.removeItem(res.data._id);

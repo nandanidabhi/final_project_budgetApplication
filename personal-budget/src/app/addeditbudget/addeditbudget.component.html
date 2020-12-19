@@ -7,7 +7,7 @@
 
         <label for="start">Start month:</label></h3>
 
-    <input type="month" id="month" name="start"
+    <input type="month" id="month" name="month"
     min="2020-03" value="2020-05" style="padding: 2%;" /><button class="btn btn-info text-center" style="width: 20%; height: 10%;" (click)="getBudgetData()">Get Budget Data</button>
   <br><br>
     <input type="text" placeholder="Title" id="title"/>
@@ -18,7 +18,7 @@
 
     <div class="table-container" id="table-id-area" style="position: relative; width:700px; margin:auto">
       <div class="table_area">
-        <table id="table" datatable [dtOptions]="dtOptions" class="table table-striped table-bordered" cellspacing="0"
+        <table id="table"  class="table table-striped table-bordered" cellspacing="0"
           width="100%">
         <thead>
         <tr>

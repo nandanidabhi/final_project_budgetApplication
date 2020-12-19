@@ -5,7 +5,7 @@ const routes = require("./routes");
 
 const app = express();
 
-var port = 4000;
+var port = 3000;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));

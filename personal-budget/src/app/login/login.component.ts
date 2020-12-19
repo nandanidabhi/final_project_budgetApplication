@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     const username = (document.getElementById('defaultLoginFormEmail') as HTMLInputElement).value;
     const password = (document.getElementById('defaultLoginFormPassword') as HTMLInputElement).value;
     console.log("Data:"+username+password);
-    axios.get('http://localhost:4000/api/nandani/login', {
+    axios.get('http://64.225.3.162:3000/api/nandani/login', {
       auth: {
         username: username,
         password: password

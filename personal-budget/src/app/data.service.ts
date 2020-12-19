@@ -8,6 +8,7 @@ import axios from 'axios';
 export class DataService {
 
   public user_budget = [];
+  budgetData: (user_budget: any) => any;
 
   constructor(private http: HttpClient) { }
 
